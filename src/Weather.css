@@ -33,3 +33,34 @@ li {
   font-size: 20px;
   font-weight: bold;
 }
+.Today {
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+.ConditionList {
+  margin-left: 340px;
+  margin-top: -60px;
+  opacity: 0.7;
+}
+.Float {
+  margin-top: 20px;
+}
+.Icon {
+  float: left;
+  display: inline;
+  margin-right: 10px;
+  width: 70px;
+}
+.Temperature {
+  font-weight: bold;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1;
+}
+.Unit {
+  font-size: 25px;
+  font-weight: bold;
+  position: relative;
+  top: -26px;
+  margin-left: 5px;
+}
