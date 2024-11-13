@@ -7,7 +7,7 @@ function App() {
     <div>
       <div className="App">
         <p>Weather app</p>
-        <Weather />
+        <Weather defaultCity="paris" />
       </div>
       <footer>
         This project was coded by{" "}
