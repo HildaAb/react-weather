@@ -1,11 +1,24 @@
 .App {
-  background-color: whitesmoke;
+  background: linear-gradient(-45deg, #d49ae6, #c1e5d9, #c7d68c, #ecd0b2);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
   max-width: 500px;
   min-height: 300px;
   padding: 20px;
   margin: 30px auto;
   border-radius: 8px;
   border: 1px solid rgb(51, 33, 109);
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 p {
   color: rgb(51, 33, 109);
