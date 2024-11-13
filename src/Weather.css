@@ -50,17 +50,18 @@ li {
   display: inline;
   margin-right: 10px;
   width: 70px;
+  margin-top: -10px;
 }
 .Temperature {
   font-weight: bold;
-  font-size: 64px;
+  font-size: 54px;
   font-weight: 500;
   line-height: 1;
 }
-.Unit {
+.unit {
   font-size: 25px;
   font-weight: bold;
   position: relative;
-  top: -26px;
+  top: -19px;
   margin-left: 5px;
 }
