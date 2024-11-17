@@ -2,18 +2,18 @@ import React from "react";
 import WeatherDate from "./WeatherDate";
 import WeatherTemperature from "./WeatherTemperature";
 import WeatherIcon from "./WeatherIcon";
-import "./Weather.css";
+import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <h1>{props.data.city}</h1>
-      <ul className="Today">
-        <li>
+      <ul className="TodaysWeather">
+        <li className="DaysWeather">
           {" "}
           <WeatherDate date={props.data.date} />
         </li>
-        <li class="text-capitalize"> {props.data.description}</li>
+        <li class="Description"> {props.data.description}</li>
       </ul>
       <div className="row">
         <div classname="col-6"></div>
@@ -21,7 +21,7 @@ export default function WeatherInfo(props) {
           <div className="Fix">
             <div className="Float">
               <div className="Icon">
-                <WeatherIcon code={props.data.icon} size={72} />
+                <WeatherIcon code={props.data.icon} size={52} />
               </div>
               <div className="Temperature">
                 <WeatherTemperature celsius={props.data.temperature} />
