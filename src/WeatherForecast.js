@@ -1,33 +1,42 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./WeatherForecast.css";
-import WeatherIcon from "./WeatherIcon";
+import WeatherForecastPreview from "./WeatherForecastPreview";
 import axios from "axios";
 
-export default function WeatherForecast() {
-  function handleResponse(response) {
-    console.log(response.data);
+export default function WeatherForecast(props) {
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState();
+
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coordinates]);
+
+  function handleForecastResponse(response) {
+    setForecast(response.data.daily);
+    setLoaded(true);
   }
 
-  let apiKey = "0ac953t0o20a266a6d9990b5f3f49241";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=New York&key={apiKey}&units=metric`;
-  axios.get(apiUrl).then(handleResponse);
-
-  return (
-    <div calssName="WeatherForecast">
-      <div className="row">
-        <div className="col">
-          <div className="WeatherForecastDay">Thursday</div>
-          <div className="WeatherForecastIcon">
-            <WeatherIcon code={"clear-sky-day"} size={38} />
-          </div>
-          <div className="WeatherForecastTemperature">
-            <span className="WeatherForecastMax">
-              <strong>19</strong>
-            </span>
-            <span className="WeatherForecastMin">10</span>
-          </div>
-        </div>
+  if (loaded) {
+    return (
+      <div className="WeatherForecast row">
+        {forecast.map(function (WeatherForecast, index) {
+          if (index < 5) {
+            return (
+              <div className="col" key={index}>
+                <WeatherForecastPreview data={WeatherForecast} />
+              </div>
+            );
+          } else {
+            return null;
+          }
+        })}
       </div>
-    </div>
-  );
+    );
+  } else {
+    let apiKey = "0ac953t0o20a266a6d9990b5f3f49241";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.city}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleForecastResponse);
+
+    return null;
+  }
 }
