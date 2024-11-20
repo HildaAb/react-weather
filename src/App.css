@@ -1,5 +1,5 @@
 .App {
-  background: linear-gradient(-45deg, #6bcc85, #e8ebe3, #e0f3b5, #3c406b);
+  background: linear-gradient(-45deg, #edf508, #e8ebe3, #e0f3b5, #06080a);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
   max-width: 500px;

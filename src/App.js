@@ -8,34 +8,34 @@ function App() {
       <div className="App">
         <p>Weather app</p>
         <Weather defaultCity="new york" />
+        <footer>
+          This project was coded by{" "}
+          <a
+            href="https://github.com/HildaAb"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ilona Aase
+          </a>{" "}
+          and is{" "}
+          <a
+            href=" https://github.com/HildaAb/my-app-test"
+            target="_blank"
+            rel="noreferrer"
+          >
+            on GitHub{" "}
+          </a>{" "}
+          and
+          <a
+            href=" https://react-test-weather.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            hosted on Netlify
+          </a>
+        </footer>
       </div>
-      <footer>
-        This project was coded by{" "}
-        <a
-          href="https://github.com/HildaAb"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Ilona Aase
-        </a>{" "}
-        and is{" "}
-        <a
-          href=" https://github.com/HildaAb/my-app-test"
-          target="_blank"
-          rel="noreferrer"
-        >
-          on GitHub{" "}
-        </a>{" "}
-        and
-        <a
-          href=" https://react-test-weather.netlify.app/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          {" "}
-          hosted on Netlify
-        </a>
-      </footer>
     </div>
   );
 }
