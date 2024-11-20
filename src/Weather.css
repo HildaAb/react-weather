@@ -19,8 +19,6 @@
   opacity: 0.8;
 }
 .ConditionList {
-  margin-left: 340px;
-  margin-top: -60px;
   opacity: 0.7;
 }
 .Float {
@@ -29,9 +27,9 @@
 .Icon {
   float: left;
   display: inline;
-  margin-right: 10px;
-  width: 70px;
-  margin-top: -10px;
+  margin-right: 27px;
+  margin-top: -7px;
+  font-weight: bolder;
 }
 .Temperature {
   font-weight: bold;

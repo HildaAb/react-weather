@@ -8,19 +8,21 @@
   justify-content: space-around;
 }
 .WeatherForecast .forecast-time {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
   margin-bottom: 10px;
+  margin-top: -10px;
   color: rgb(51, 33, 109);
   font-weight: bold;
   margin-left: -10px;
 }
 .Weather .WeatherForecast canvas {
-  width: 38px;
+  width: 28px;
   margin-bottom: 10px;
+  margin-left: -10px;
 }
 .WeatherForecast .forecast-temperature {
-  margin-right: 15px;
+  margin-right: 13px;
   font-size: 18px;
   font-style: normal;
   font-weight: bold;

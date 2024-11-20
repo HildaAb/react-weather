@@ -1,10 +1,10 @@
 .WeatherInfo h1 {
   color: rgb(51, 33, 109);
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 100px;
   line-height: 1;
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: -10px;
 }
 li {
   font-size: 16px;
@@ -14,5 +14,6 @@ li {
   margin-left: -38px;
 }
 .ConditionList {
-  margin-left: 337px;
+  margin-left: 344px;
+  margin-top: -54px;
 }

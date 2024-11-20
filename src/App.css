@@ -22,7 +22,7 @@
 }
 p {
   color: rgb(51, 33, 109);
-  font-size: 50px;
+  font-size: 35px;
   font-weight: 100px;
   text-align: center;
   font-weight: bolder;
@@ -32,8 +32,9 @@ p {
 }
 footer {
   text-align: center;
-  font-size: 12px;
-  margin-top: -24px;
+  font-size: 9px;
+  margin-top: -34px;
+  margin-bottom: -10px;
 }
 a {
   color: rgb(51, 33, 109);
