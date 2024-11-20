@@ -5,27 +5,29 @@ export default function WeatherForecastPreview(props) {
   function day() {
     let date = new Date(props.data.time * 1000);
     let day = date.getDay();
-    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
     return days[day];
   }
 
-  function maxTemp() {
+  function maxTemperature() {
     let temperature = Math.round(props.data.temperature.maximum);
 
     return `${temperature}°`;
   }
-  function minTemp() {
+
+  function minTemperature() {
     let temperature = Math.round(props.data.temperature.minimum);
 
     return `${temperature}°`;
   }
+
   return (
     <div className="WeatherForecastPreview">
-      <div className="WeatherForecastDay">{day()}</div>
-      <WeatherIcon code={props.data.condition.icon} size={38} />
-      <div className="WeatherForecastTemperature">
-        <span className="WeatherForecastMax">{maxTemp()}</span>
-        <span className="WeatherForecastMin">{minTemp()}</span>
+      <div className="forecast-time">{day()}</div>
+      <WeatherIcon code={props.data.condition.icon} size={42} />
+      <div className="forecast-temperature">
+        <span className="forecast-temperature-max">{maxTemperature()}</span>
+        <span className="forecast-temperature-min">{minTemperature()}</span>
       </div>
     </div>
   );
